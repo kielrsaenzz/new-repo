@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Post {{ post["id"] }}{% endblock title %}
+
+{% block content %}
+
+<h1 class="my-4">{{ post["title"] }}</h1>
+<p><strong>Fecha: </strong>{{ post["created"] }}</p>
+<p><strong>Contenido: </strong>{{ post["content"] }}</p>
+<a href="{{ url_for('get_all_post') }}" class="btn btn-primary">Regresar</a>
+
+{% endblock content %}

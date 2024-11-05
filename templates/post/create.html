@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Crear Post{% endblock title %}
+
+{% block content %}
+
+<form action="/post/create" method="post">
+    <div class="mb-2 mt-4">
+        <label for="title">Título</label>
+        <input type="text" name="title" id="title" />
+    </div>
+    <div class="mb-4">
+        <label for="content">Contenido</label>
+        <input type="text" name="content" id="content" />
+    </div>
+    <button class="btn btn-primary" type="submit">Guardar</button>
+    <a href="{{ url_for('get_all_post') }}" class="btn btn-info">Regresar</a>
+</form>
+
+{% endblock content %}
